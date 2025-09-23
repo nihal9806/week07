@@ -131,8 +131,8 @@ jobs:
     # Build and Push Docker image for Product Service
     - name: Build and Push Product Service Image
       run: |
-        docker build -t ${{ env.nihal722acr.azurecr.io }}/product_service:latest ./backend/product_service/
-        docker push ${{ env.nihal722acr.azurecr.io }}/product_service:latest
+        docker build -t nihal722acr.azurecr.io /product_service:latest ./backend/product_service/
+        docker push nihal722acr.azurecr.io /product_service:latest
 
     # Build and Push Docker image for Order Service
     - name: Build and Push Order Service Image
