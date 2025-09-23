@@ -8,8 +8,8 @@ on:
     # ⬇️ If this repo's folders live under "week07/", keep these paths.
     # If your repo has backend/.github at the root, drop the "week07/" prefix.
     paths:
-      - "week07/backend/**"
-      - "week07/.github/workflows/backend_ci.yml"
+      - "backend/**"
+      - ".github/workflows/backend_ci.yml"
 
 concurrency:
   group: backend-ci-${{ github.ref }}
