@@ -126,19 +126,19 @@ jobs:
 
     # Login to Azure Container Registry (ACR)
     - name: Login to Azure Container Registry
-      run: az acr login --name nihal722acr.azurecr.io
+      run: az acr login --name nihal722acr
 
     # Build and Push Docker image for Product Service
     - name: Build and Push Product Service Image
       run: |
-        docker build -t nihal722acr.azurecr.io /product_service:latest ./backend/product_service/
-        docker push nihal722acr.azurecr.io /product_service:latest
+        docker build -t nihal722acr.azurecr.io/product_service:latest ./backend/product_service/
+        docker push nihal722acr.azurecr.io/product_service:latest
 
     # Build and Push Docker image for Order Service
     - name: Build and Push Order Service Image
       run: |
-        docker build -t nihal722acr.azurecr.io /order_service:latest ./backend/order_service/
-        docker push nihal722acr.azurecr.io /order_service:latest
+        docker build -t nihal722acr.azurecr.io/order_service:latest ./backend/order_service/
+        docker push nihal722acr.azurecr.io/order_service:latest
 
     # Logout from Azure for security (runs even if image push fails)
     - name: Logout from Azure
